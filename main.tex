@@ -1,0 +1,115 @@
+\documentclass[
+	a4paper,%
+	notoc,%
+	nobib,%
+	nols,%
+	nofonts,%
+	% marginals=raggedouter,%
+	% symmetric%
+	]{tufte-book} % Use the tufte-book class which in turn uses the tufte-common class
+\input{config.tex}
+%----------------------------------------------------------------------------------------
+%	BOOK META-INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title[Jingran Sheng]{\Large How political argot work as a tool of protesting through border making process and its metaphoric reflection on spacial practice} % Title of the book
+
+\author[Jingran Sheng]{Jingran Sheng} % Author
+
+\publisher{Development Planning Unit, University College London} % Publisher
+
+%----------------------------------------------------------------------------------------
+
+\addbibresource{bibliography.bib} % Use the bibliography.bib file for the bibliography
+
+\newcommand{\ict}{\smallcaps{ict}}
+\newcommand{\gfw}{\smallcaps{gfw}}
+\newcommand{\oed}{\smallcaps{oed}}
+\newcommand{\cpc}{\smallcaps{cpc}}
+\newcommand{\prc}{\smallcaps{prc}}
+\newcommand{\cnnic}{\smallcaps{cnnic}}
+\newcommand{\cernic}{\smallcaps{cernic}}
+\newcommand{\cernet}{\smallcaps{cernet}}
+\newcommand{\miit}{\smallcaps{miit}}
+\newcommand{\mpt}{\smallcaps{mpt}}
+\newcommand{\psb}{\smallcaps{psb}}
+\newcommand{\isp}{\smallcaps{isp}}
+\newcommand{\usa}{\smallcaps{usa}}
+\newcommand{\cac}{\smallcaps{cac}}
+\newcommand{\mfa}{\smallcaps{mfa}}
+\newcommand{\vpn}{\smallcaps{vpn}}
+\newcommand{\bbc}{\smallcaps{bbc}}
+\newcommand{\uk}{\smallcaps{uk}}
+
+\newcommand{\moha}{\textit{m\'o-h\'a}}
+\newcommand{\Moha}{\textit{M\'o-h\'a}}
+
+% \makenoidxglossaries
+% \newacronym{ict}{ict}{Information and Communications Technology}
+% \newacronym{gfw}{gfw}{Great Firewall of China}
+% \newacronym{oed}{oed}{Oxford English Dictionary}
+% \newacronym{cpc}{cpc}{Communist Party of China}
+% \newacronym{prc}{prc}{People's Republic of China}
+% \newacronym{cnnic}{cnnic}{China Internet Network Information Center}
+% \newacronym{cernic}{cernic}{China Education and Research Network Information Center}
+% \newacronym{cernet}{cernet}{The China Education and Research Network}
+% \newacronym{miit}{miit}{Ministry of Industry and Information Technology}
+% \newacronym{mpt}{mpt}{Ministry of Posts and Telecommunications of the People's Republic of China}
+% \newacronym{psb}{psb}{Public Security Bureau}
+% \newacronym{isp}{isp}{Internet Service Provider}
+% \newacronym{usa}{usa}{United States of America}
+% \newacronym{cau}{cac}{Cyberspace Administration of China}
+% \newacronym{mfa}{mfa}{The Ministry of Foreign Affairs of the People's Republic of China}
+% \newacronym{vpn}{vpn}{Virtual Private Network}
+% \newacronym{bbc}{bbc}{British Broadcasting Corporation}
+% \newacronym{uk}{uk}{United Kingdom of Great Britain and Northern Ireland}
+
+\begin{document}
+
+% \maketitle % Print the title page
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+\frontmatter
+\includepdf{cover3.pdf}
+\newpage
+% \input{chapters/abstract.tex}
+\input{chapters/ac.tex}
+\cleardoublepage
+\input{acron.tex}
+% \begin{fullwidth}
+% ~\vfill
+% \thispagestyle{empty}
+% \end{fullwidth}
+% \setcounter{page}{0}\renewcommand{\thepage}{\roman{page}}
+\cleardoublepage
+\setcounter{tocdepth}{3}
+\tableofcontents % Print the table of contents
+\begin{fullwidth}
+\listoffigures % Print a list of figures
+\end{fullwidth}
+% \listoftables % Print a list of tables
+
+\cleardoublepage
+
+\mainmatter
+
+\setcounter{secnumdepth}{3}
+\setcounter{page}{1} %\renewcommand{\thepage}{\arabic{page}}\pagestyle{plain}
+\input{chapters/intro.tex}
+\input{chapters/lit.tex}
+\input{chapters/case.tex}
+\input{chapters/conc.tex}
+
+\backmatter
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+% \printindex % Print the index at the very end of the document
+
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+\input{chapters/app.tex}
+\input{chapters/script.tex}
+\end{document}

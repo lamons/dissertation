@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=1.3in, y=1.3in, font=\footnotesize]
+	\draw[very thick] (1,1) circle [radius=.1];
+    \draw[very thick] (1,2) circle [radius=.1];
+    \draw[very thick] (3,1) circle [radius=.1];
+    \draw[very thick] (3,2) circle [radius=.1];
+
+    \draw [<->] (1,1.15) -- (1,1.85);
+    \draw [<->] (3,1.15) -- (3,1.85);
+    \draw [<->] (1.15,2) -- (2.85,2);
+    \draw [<->] (1.15,1) -- (2.85,1);
+
+    \draw (1,0.85) -- (1,0.65) node [below] {ordinary};
+    \draw (3,0.85) -- (3,0.65) node [below] {political};
+    \draw (0.85,1) -- (0.65,1) node [left] {virtual space};
+    \draw (0.85,2) -- (0.65,2) node [left] {physical space};
+
+    \draw [<->] (1.15,1.15) -- (2.85,1.85);
+    \draw [<->] (1.15,1.85) -- (2.85,1.15);
+
+    \node [rectangle, fill=white] at (2, 1.5) {power relations};
+\end{tikzpicture}
+

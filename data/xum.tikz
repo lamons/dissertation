@@ -1,0 +1,35 @@
+\begin{tikzpicture}[baseline]
+  \begin{axis}[
+  ymin=0,
+  xmin=2013-01-01,
+  xmax=2017-08-01,
+  ymax=100,
+  width=\textwidth,
+  height=2in,
+  grid=both,
+  y filter/.expression={y==0 ? nan : y},
+  label style={font=\footnotesize},
+  x tick label style={rotate=45,/pgf/number format/.cd, fixed,precision=0, set thousands separator={}},
+  legend style={legend pos=north west,font=\footnotesize},
+  legend cell align=left,
+  xlabel=year,
+  date coordinates in=x,
+  date ZERO=2004-01-01,
+  xticklabel=\year.\month,
+  ylabel=popularity,
+  xtick = {
+  {2013-01-01},
+  {2013-07-01},
+  {2014-01-01},
+  {2014-07-01},
+  {2015-01-01},
+  {2015-07-01},
+  {2016-01-01},
+  {2016-07-01},
+  {2017-01-01},
+  {2017-07-01}
+  }]
+    \addplot[color=black, mark=star] table [x=month, y=popularity, col sep=comma] {data/xum.csv};\addlegendentry{续命}
+  \end{axis}
+\end{tikzpicture}
+

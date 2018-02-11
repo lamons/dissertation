@@ -1,0 +1,41 @@
+\begin{tikzpicture}[baseline]
+  \begin{axis}[
+  ymin=0,
+  xmin=1997,
+  xmax=2016,
+  width=.6\textwidth,
+  height=3in,
+  yticklabel pos=upper,
+  ytick distance=500,
+  grid=both,
+  label style={font=\footnotesize},
+  x tick label style={/pgf/number format/.cd, fixed,precision=0, set thousands separator={}},
+  legend style={legend pos=north west,font=\footnotesize},
+  legend cell align=left,
+  xlabel=year,
+  ylabel=number of Internet users (millions)]
+    \addplot[color=black, mark=square] table [x=year, y=china, col sep=comma] {data/internetuse.csv};\addlegendentry{China}
+    \addplot[color=black, mark=triangle] table [x=year, y=world, col sep=comma] {data/internetuse.csv};\addlegendentry{worldwide}
+  \end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}[baseline]
+  \begin{axis}[
+  ymin=0,
+  xmin=1997,
+  xmax=2005,
+  width=.4\textwidth,
+  height=3in,
+  yticklabel style={
+        /pgf/number format/fixed,
+        /pgf/number format/precision=5},
+  %ytick distance=500,
+  grid=both,
+  label style={font=\footnotesize},
+  x tick label style={/pgf/number format/.cd, fixed,precision=0, set thousands separator={}},
+  legend style={legend pos=north west,font=\footnotesize},
+  legend cell align=left,]
+    \addplot[color=black, mark=square] table [x=year, y=china, col sep=comma] {data/internetuse.csv};\addlegendentry{China (zoomed in)}
+    %\addplot[color=black, mark=triangle] table [x=year, y=world, col sep=comma] {data/internetuse.csv};\addlegendentry{worldwide}
+  \end{axis}
+\end{tikzpicture}
+

@@ -1,0 +1,58 @@
+\begin{tikzpicture}[baseline]
+  \begin{axis}[
+  ymin=0,
+  xmin=2004-01-01,
+  xmax=2017-08-01,
+  ymax=100,
+  width=\textwidth,
+  height=3in,
+  grid=both,
+  y filter/.expression={y==0 ? nan : y},
+  label style={font=\footnotesize},
+  x tick label style={rotate=45,/pgf/number format/.cd, fixed,precision=0, set thousands separator={}},
+  legend style={legend pos=north west,font=\footnotesize},
+  legend cell align=left,
+  xlabel=year,
+  date coordinates in=x,
+  date ZERO=2004-01-01,
+  xticklabel=\year.\month,
+  ylabel=popularity,
+  xtick = {
+  {2004-01-01},
+  {2004-07-01},
+  {2005-01-01},
+  {2005-07-01},
+  {2006-01-01},
+  {2006-07-01},
+  {2007-01-01},
+  {2007-07-01},
+  {2008-01-01},
+  {2008-07-01},
+  {2009-01-01},
+  {2009-07-01},
+  {2010-01-01},
+  {2010-07-01},
+  {2011-01-01},
+  {2011-07-01},
+  {2012-01-01},
+  {2012-07-01},
+  {2013-01-01},
+  {2013-07-01},
+  {2014-01-01},
+  {2014-07-01},
+  {2015-01-01},
+  {2015-07-01},
+  {2016-01-01},
+  {2016-07-01},
+  {2017-01-01},
+  {2017-07-01}
+  }]
+    \addplot[only marks, mark=pentagon] table [x=month, y=popularity, col sep=comma] {data/excited.csv};\addlegendentry{excited}
+    \addplot[only marks, mark=diamond] table [x=month, y=popularity, col sep=comma] {data/gouliguo.csv};\addlegendentry{苟利国家生死以}
+    \addplot[only marks, mark=o] table [x=month, y=popularity, col sep=comma] {data/hah.csv};\addlegendentry{蛤蛤}
+    \addplot[only marks, mark=+] table [x=month, y=popularity, col sep=comma] {data/hkj.csv};\addlegendentry{香港记者}
+    \addplot[only marks, mark=x] table [x=month, y=popularity, col sep=comma] {data/tanxiao.csv};\addlegendentry{谈笑风生}
+    \addplot[only marks, mark=star] table [x=month, y=popularity, col sep=comma] {data/xum.csv};\addlegendentry{续命}
+  \end{axis}
+\end{tikzpicture}
+

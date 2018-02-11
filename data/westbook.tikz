@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  ybar,
+  ymin=0,
+  ymax=70,
+  width=\textwidth,
+  height=3in,
+  grid=both,
+  label style={font=\footnotesize},
+  ytick distance=10,
+  xtick distance=1,
+  x tick label style={/pgf/number format/.cd, fixed,precision=0, set thousands separator={}},
+  xlabel=year,
+  ylabel=amount]
+    \addplot[black,fill=white] table [x=year, y=amount, col sep=comma] {data/westbook.csv};
+  \end{axis}
+\end{tikzpicture}
