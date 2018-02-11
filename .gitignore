@@ -22,4 +22,6 @@
 *.out
 *.synctex.gz
 *.synctex
+*.bcf
+*.run.xml
 fonts/
